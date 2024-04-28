@@ -1,6 +1,6 @@
 # Spend Time Together! App
 
-![image](https://github.com/Djeisen642/SpendTimeTogetherApp/assets/33557118/08a78223-c4f8-4a92-af85-29eec230349f)
+![App example screenshot](image.png)
 
 This app is being built to facilitate friends and family spending more time together.
 

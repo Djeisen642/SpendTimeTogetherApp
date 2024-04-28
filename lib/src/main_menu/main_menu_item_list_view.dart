@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spend_time_together_app/src/main_menu/friends_details_view.dart';
 
+import '../utils/constants.dart';
+import 'people_details_view.dart';
 import '../settings/settings_view.dart';
 import 'main_menu_item.dart';
 import 'sample_item_details_view.dart';
@@ -11,28 +12,28 @@ class MainMenuItemListView extends StatelessWidget {
     super.key,
     this.items = const [
       MainMenuItem(
-          'New event',
+          newEventTitle,
           Icon(
             Icons.add,
             color: Colors.pink,
             size: 24.0,
           )),
       MainMenuItem(
-          'Setup schedule',
+          scheduleTitle,
           Icon(
             Icons.calendar_month,
             color: Colors.pink,
             size: 24.0,
           )),
       MainMenuItem(
-          'Friends',
+          familyFriendsTitle,
           Icon(
             Icons.people,
             color: Colors.pink,
             size: 24.0,
           )),
       MainMenuItem(
-          'Activities',
+          activitiesTitle,
           Icon(
             Icons.favorite,
             color: Colors.pink,
@@ -83,13 +84,13 @@ class MainMenuItemListView extends StatelessWidget {
               leading: item.icon,
               onTap: () {
                 switch (item.text) {
-                  case 'Friends':
+                  case familyFriendsTitle:
                     Navigator.restorablePushNamed(
                         context, FriendsDetailsView.routeName);
                     break;
-                  case 'New event':
-                  case 'Setup schedule':
-                  case 'Activities':
+                  case newEventTitle:
+                  case scheduleTitle:
+                  case activitiesTitle:
                   default:
                     Navigator.restorablePushNamed(
                       context,
