@@ -1,30 +1,13 @@
-# spend_time_together_app
+# Spend Time Together! App
 
-A new Flutter project.
+![image](https://github.com/Djeisen642/SpendTimeTogetherApp/assets/33557118/08a78223-c4f8-4a92-af85-29eec230349f)
 
-## Getting Started
+This app is being built to facilitate friends and family spending more time together.
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple).
+People have time that they are available to the people they are close to.
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Maybe, you've got family, friends, and acquaintances. You'll have a more open schedule for your family, a little less open schedule for friends but still pretty open, and a very limited schedule for acquaintances.
 
-## Assets
+You can list out the types of things that you're interested in doing with certain types of people. Maybe you're open to doing something specific with someone. This app will facilitate giving people the opportunity to list out what they are open to doing together.
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
-
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
-
-## Localization
-
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
-
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter
-apps](https://flutter.dev/docs/development/accessibility-and-localization/internationalization)
+Then, when you've got your schedule, your list of activities, and your family/friends/acquaintances, then you're ready to create new events that invite your family/friends/acquaintances to things that you all mutually want to do.
