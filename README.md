@@ -1,6 +1,14 @@
 # Spend Time Together! App
 
-![App example screenshot](image.png)
+![App example screenshot](MainPageScreenshot.png)
+
+Activities Page
+
+![Activities page screenshot](ActivitiesPageScreenshot.png)
+
+People Page
+
+![People page screenshot](PeoplePageScreenshot.png)
 
 This app is being built to facilitate friends and family spending more time together.
 
