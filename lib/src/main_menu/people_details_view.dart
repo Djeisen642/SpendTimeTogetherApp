@@ -1,26 +1,36 @@
 import 'package:flutter/material.dart';
 
-import '../utils/person_item.dart';
+import '../models/person_item.dart';
 
-/// Displays detailed information about a SampleItem.
-class FriendsDetailsView extends StatelessWidget {
-  const FriendsDetailsView({
+class PeopleDetailsView extends StatefulWidget {
+  const PeopleDetailsView({
     super.key,
-    this.people = const [
-      PersonItem('Jason Suttles', PersonType.family),
-      PersonItem('John Rivera', PersonType.family),
-      PersonItem('Doyle Navarro', PersonType.friend),
-      PersonItem('Jane Doe', PersonType.friend),
-      PersonItem('John Smith', PersonType.friend),
-      PersonItem('Mary Johnson', PersonType.acquaintance),
-      PersonItem('Michael Jones', PersonType.acquaintance),
-      PersonItem('Sarah Miller', PersonType.other),
-    ],
   });
 
   static const routeName = '/people';
 
-  final List<PersonItem> people;
+  @override
+  State<PeopleDetailsView> createState() => _PeopleDetailsViewState();
+}
+
+class _PeopleDetailsViewState extends State<PeopleDetailsView> {
+  final List<PersonItem> people = const [
+    PersonItem('Jason Suttles', PersonType.family),
+    PersonItem('John Rivera', PersonType.family),
+    PersonItem('Doyle Navarro', PersonType.friend),
+    PersonItem('Jane Doe', PersonType.friend),
+    PersonItem('John Smith', PersonType.friend),
+    PersonItem('Mary Johnson', PersonType.acquaintance),
+    PersonItem('Michael Jones', PersonType.acquaintance),
+    PersonItem('Sarah Miller', PersonType.other),
+  ];
+  List<PersonItem> filteredPeople = [];
+
+  @override
+  void initState() {
+    filteredPeople = people;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,24 +40,34 @@ class FriendsDetailsView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Search',
                 suffixIcon: Icon(Icons.search),
               ),
+              onChanged: (String value) {
+                setState(() {
+                  filteredPeople = people.where((PersonItem person) {
+                    return person.name
+                        .toLowerCase()
+                        .contains(value.toLowerCase());
+                  }).toList();
+                });
+              },
             ),
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: people.length,
+              itemCount: filteredPeople.length,
               restorationId: 'peopleListView',
               itemBuilder: (BuildContext context, int index) {
-                final item = people[index];
+                final item = filteredPeople[index];
                 return ListTile(
                   title: Text(item.name),
                   leading: const Icon(Icons.person),
+                  subtitle: Text(item.displayType()),
                 );
               },
             ),

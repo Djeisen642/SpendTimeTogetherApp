@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:spend_time_together_app/src/main_menu/activities_view.dart';
 
 import 'main_menu/people_details_view.dart';
 import 'main_menu/sample_item_details_view.dart';
@@ -68,10 +69,12 @@ class SpendTimeTogetherApp extends StatelessWidget {
               settings: routeSettings,
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
+                  case PeopleDetailsView.routeName:
+                    return const PeopleDetailsView();
+                  case ActivitiesView.routeName:
+                    return const ActivitiesView();
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case FriendsDetailsView.routeName:
-                    return const FriendsDetailsView();
                   case SampleItemDetailsView.routeName:
                     return const SampleItemDetailsView();
                   case MainMenuItemListView.routeName:

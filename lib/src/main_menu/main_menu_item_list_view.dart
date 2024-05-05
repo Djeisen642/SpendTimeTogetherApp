@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spend_time_together_app/src/main_menu/activities_view.dart';
 
 import '../utils/constants.dart';
 import 'people_details_view.dart';
@@ -86,11 +87,16 @@ class MainMenuItemListView extends StatelessWidget {
                 switch (item.text) {
                   case familyFriendsTitle:
                     Navigator.restorablePushNamed(
-                        context, FriendsDetailsView.routeName);
+                        context, PeopleDetailsView.routeName);
+                    break;
+                  case activitiesTitle:
+                    Navigator.restorablePushNamed(
+                      context,
+                      ActivitiesView.routeName,
+                    );
                     break;
                   case newEventTitle:
                   case scheduleTitle:
-                  case activitiesTitle:
                   default:
                     Navigator.restorablePushNamed(
                       context,
