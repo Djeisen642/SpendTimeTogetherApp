@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:spend_time_together_app/src/main_menu/activities_view.dart';
 
-import 'main_menu/people_details_view.dart';
-import 'main_menu/sample_item_details_view.dart';
-import 'main_menu/main_menu_item_list_view.dart';
+import 'views/activities_view.dart';
+import 'views/people_details_view.dart';
+import 'views/sample_item_details_view.dart';
+import 'views/auth_gate_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
@@ -61,6 +61,7 @@ class SpendTimeTogetherApp extends StatelessWidget {
           theme: ThemeData(),
           darkTheme: ThemeData.dark(),
           themeMode: settingsController.themeMode,
+          home: AuthGate(),
 
           // Define a function to handle named routes in order to support
           // Flutter web url navigation and deep linking.
@@ -77,9 +78,9 @@ class SpendTimeTogetherApp extends StatelessWidget {
                     return SettingsView(controller: settingsController);
                   case SampleItemDetailsView.routeName:
                     return const SampleItemDetailsView();
-                  case MainMenuItemListView.routeName:
+                  case AuthGate.routeName:
                   default:
-                    return const MainMenuItemListView();
+                    return AuthGate();
                 }
               },
             );

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "208294205780",
+    "project_id": "spend-time-together",
+    "storage_bucket": "spend-time-together.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208294205780:android:e03c04f1b44f45ba4190c1",
+        "android_client_info": {
+          "package_name": "com.example.spend_time_together_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCmcfCNn_yrKHZEC5CFbCk24_RdS1PaXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

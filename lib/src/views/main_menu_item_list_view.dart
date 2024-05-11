@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:spend_time_together_app/src/main_menu/activities_view.dart';
+import 'package:spend_time_together_app/src/views/activities_view.dart';
 
 import '../utils/constants.dart';
 import 'people_details_view.dart';
 import '../settings/settings_view.dart';
-import 'main_menu_item.dart';
+import '../models/main_menu_item.dart';
 import 'sample_item_details_view.dart';
 
 /// Displays a list of SampleItems.
@@ -42,8 +42,6 @@ class MainMenuItemListView extends StatelessWidget {
           ))
     ],
   });
-
-  static const routeName = '/';
 
   final List<MainMenuItem> items;
 
