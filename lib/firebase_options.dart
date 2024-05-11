@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:spend_time_together_app/src/utils/keys.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -50,7 +51,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCwEEV34CtOKt_wy2-9411W-rRCHcrBdFo',
+    apiKey: webApiKey,
     appId: '1:208294205780:web:258c1f7f0a1a17d74190c1',
     messagingSenderId: '208294205780',
     projectId: 'spend-time-together',
@@ -60,7 +61,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCCmcfCNn_yrKHZEC5CFbCk24_RdS1PaXw',
+    apiKey: androidApiKey,
     appId: '1:208294205780:android:e03c04f1b44f45ba4190c1',
     messagingSenderId: '208294205780',
     projectId: 'spend-time-together',

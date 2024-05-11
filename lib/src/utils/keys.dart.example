@@ -1,0 +1,2 @@
+const String webApiKey = 'YOUR KEY HERE';
+const String androidApiKey = 'YOUR KEY HERE';
