@@ -1,5 +1,7 @@
 # Spend Time Together! App
 
+... I let this app languish for a few months and now it won't compile. Looking for an alternative to flutter now...
+
 ![App example screenshot](MainPageScreenshot.png)
 
 Activities Page
